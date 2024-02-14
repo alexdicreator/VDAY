@@ -1,0 +1,68 @@
+/* styles.css */
+body {
+    font-family: Comic Sans MS;
+    background-color: #f9e6e6;
+    text-align: center;
+}
+
+.container {
+    padding: 20px;
+    background-color: #ffcccc;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 400px;
+}
+
+button {
+    background-color: #ff9999;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#hiddenMessage {
+    display: none;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+
+.hearts-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ffcccc;
+    transform-origin: center;
+    animation: float 5s infinite alternate;
+}
+.wavy-background::after 
+{
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    background-color: #0f0f10; /* Customize the color */
+    height: 85%; /* Adjust the height as needed */
+}
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+    }
+}
